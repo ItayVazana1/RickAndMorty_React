@@ -1,6 +1,5 @@
 import React from 'react';
 import '../Style/Style.css';
-
 function Mtitle() {
     const CustomFontStyle = {
         fontFamily: 'get_schwifty',

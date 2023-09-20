@@ -64,22 +64,22 @@ body{
     font-weight: bold;
     background-color:darkseagreen;
     cursor: url("/src/visual resources/Rick.cur"),pointer;
-    font-size: 25px;
-    width: 200px;
+    font-size: 15px;
+    width: 120px;
 }
-#WatchList_btn{
+#Watch_btn{
     font-weight: bold;
     background-color:lightblue;
     cursor: url("/src/visual resources/Mr.Meseeks.cur"),pointer;
-    font-size: 25px;
-    width: 200px;
+    font-size: 15px;
+    width: 120px;
 }
 #About_btn{
     font-weight: bold;
     background-color:peachpuff;
     cursor: url("/src/visual resources/Morty.cur"),pointer;
-    font-size: 25px;
-    width: 200px;
+    font-size: 15px;
+    width: 120px;
 }
 #Home_btn:hover{
     font-family: 'get_schwifty' , 'Arial, Helvetica, sans-serif';
@@ -92,6 +92,11 @@ body{
     color: rgb(179, 82, 2);
 
 }
+#Watch_btn:hover{
+    font-family: 'get_schwifty' , 'Arial, Helvetica, sans-serif';
+    background-color:lightskyblue;
+    color: rgb(179, 82, 2);
+}
 #About_btn:hover{
     font-family: 'get_schwifty' , 'Arial, Helvetica, sans-serif';
     background-color:rgb(255, 203, 59);
@@ -100,12 +105,16 @@ body{
 }
 
 .Clock{
-    font-family:fantasy;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: greenyellow;
     font-weight: light;
-    font-size: 30px;
+    font-size: 17px;
     display: flex;
     justify-content: left;
     align-items: center;
     margin-left: 50px;
+}
+
+.Clock:hover{
+    color: orange;
 }

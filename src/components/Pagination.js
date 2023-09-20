@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Pagination = ({setPageNumber,pageNumber}) => { 
+const Pagination = ({setPageNumber,pageNumber,maxPages}) => { 
 
     let x = 0;
     let next = () => {
-        if(pageNumber<42){
+        if(pageNumber<maxPages){
             setPageNumber((x) => x+1);
         }else{
-            setPageNumber(42);
+            setPageNumber(maxPages);
         }
     };
     let prev = () => {
@@ -21,7 +21,7 @@ const Pagination = ({setPageNumber,pageNumber}) => {
 
     function end_of_pages(pageNumber){
         let style_props_button;
-        if(pageNumber == 42){
+        if(pageNumber == maxPages){
             style_props_button = "btn btn-light my-5 fs-5 fw-bold";
         }else{
             style_props_button = "btn btn-dark text-success my-5 fs-5 fw-bold";

@@ -1,7 +1,7 @@
 import React from 'react'
 import Cards from './Cards.js';
 import Pagination from './Pagination.js';
-import '../Style/Style.css';
+
 
 
 
@@ -17,7 +17,7 @@ function Cards_Gallery({results , setPageNumber , pageNumber}) {
                     </div>                  
                 </div> 
             </div>
-            <Pagination setPageNumber={setPageNumber} pageNumber={pageNumber}/>
+            <Pagination setPageNumber={setPageNumber} pageNumber={pageNumber} maxPages={42}/>
         </div>
     );
   }

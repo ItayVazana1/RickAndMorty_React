@@ -1,29 +1,44 @@
-import { useState } from "react";
-import '../Style/Style.css';
+import React, { Component } from 'react';
 
-const Clock = () =>{
-    
-    let time = new Date().toLocaleTimeString();
-    let date = new Date().toLocaleDateString();
-    const [CurrentTime, setCurrentTime] = useState(time);
-    const [CurrentDate, setCurrentDate] = useState(date);
 
-    const UpdateTime = () =>{
-        let time = new Date().toLocaleTimeString();
-        let date = new Date().toLocaleDateString();
-        setCurrentTime(time);
-        setCurrentDate(date);
-    }
 
-    setInterval(UpdateTime,1000);
+class Clock extends Component {
+  constructor(props) {
+    super(props);
 
-    return(
-        <div>
-            <h4 className="Clock">{CurrentDate}</h4>
-            <h4 className="Clock">{CurrentTime}</h4>
-        </div>
-        )
-    }
+    this.state = {
+      currentTime: new Date(),
+    };
+  }
 
-    export default Clock;
-    
+  componentDidMount() {
+    this.intervalID = setInterval(() => {
+      this.setState({ currentTime: new Date() });
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalID);
+  }
+
+  render() {
+    const { currentTime } = this.state;
+
+    const hours = currentTime.getHours().toString().padStart(2, '0');
+    const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+    const seconds = currentTime.getSeconds().toString().padStart(2, '0');
+
+    const day = currentTime.getDate().toString().padStart(2, '0');
+    const month = (currentTime.getMonth() + 1).toString().padStart(2, '0'); 
+    const year = currentTime.getFullYear();
+
+    return (
+      <div>
+        <div className='Clock'>{hours}:{minutes}:{seconds}</div>
+        <div className='Clock'>{day}/{month}/{year}</div>
+      </div>
+    );
+  }
+}
+
+export default Clock;
