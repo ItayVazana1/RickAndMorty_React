@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
-import '../src/Style/Style.css';
-
-
+import './Style/DarkMode.css';
+import './Style/GalleryStyle.css';
 
 
 ReactDOM.render(

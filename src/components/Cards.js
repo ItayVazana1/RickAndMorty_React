@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Style/GalleryStyle.css'
+import '../Style/DarkMode.css';
 
 
 function Badge_color_status(status){

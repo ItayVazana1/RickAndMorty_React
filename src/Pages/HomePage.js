@@ -1,13 +1,15 @@
 import React, { useState,useEffect } from 'react'
 import Gallery from '../components/Gallery.js';
+import Modal from '../components/Modal.js';
 
-function HomePage() {
+function HomePage(addData) {
 
-
+  const [ModalData , setModalData] = useState(' ');
+  const [isOpen , setIsOpen] = useState(false);
   // load all characters data
   let [pageNumber , setPageNumber] = useState(1);
   let [fetchedData , updateFetchedData] =useState([]);
-  let { info , results } = fetchedData;
+  let {results} = fetchedData;
   let api =  `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
 
   useEffect(()=>{
@@ -28,18 +30,9 @@ function HomePage() {
               
             })
             .then((characterData) => {
-              
-              alert(
-
-                "\nname  :   " + characterData.name +
-                "\nstatus  :   " +characterData.status + 
-                "\ngender  :   " + characterData.gender +
-                "\nspecies  :   " + characterData.species +
-                "\nlocation  :   " + characterData.location.name 
-
-
-                
-                );}).catch((error) => {
+              setModalData(characterData);
+              setIsOpen(true);
+              }).catch((error) => {
               console.error('Error fetching character data:', error);
             });
 
@@ -58,11 +51,11 @@ function HomePage() {
           };
         }, []);
 
-  return (
-    <div>
-      <Gallery results={results} setPageNumber={setPageNumber} pageNumber={pageNumber}/>
-    </div>
-  );
+        return(
+          <div>
+            <Modal Open={isOpen} onClose={()=>setIsOpen(false)} Cdata={ModalData}></Modal>
+            <Gallery results={results} setPageNumber={setPageNumber} pageNumber={pageNumber}/>
+            </div>
+        )  
 }
-
 export default HomePage;

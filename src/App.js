@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import HomePage from './Pages/HomePage.js';
 import AboutPage from './Pages/AboutPage.js';
@@ -26,10 +26,9 @@ function App() {
           </ul>
         </nav>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage/>} />
           <Route path="/WatchList" element={<WatchListPage />} />
           <Route path="/About" element={<AboutPage />} />
-          
           </Routes>
         </Router>
       </header>

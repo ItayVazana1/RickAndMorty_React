@@ -6,11 +6,12 @@ body,html{
     padding: 0;
     height: 100%;
     width: 100%;
+    color: black;
 }
 
 body{
     padding-top: 15px;
-    background-color: aliceblue;
+    background-color:ghostwhite;
     text-align: center;
     cursor: url("/src/visual resources/PickleCursor.cur"),pointer;
     
