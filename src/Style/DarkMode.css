@@ -7,6 +7,7 @@ body,html{
     height: 100%;
     width: 100%;
     color: white;
+    font-family: 'Oswald';
 }
 
 body{
@@ -44,8 +45,9 @@ body{
 
 
 .secTitle{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: whitesmoke;
+    font-size: 20px;
+    font-family: 'Oswald';
+    color: rgb(255, 232, 57);
     font-size: 25px;
     font-weight: 500;
     padding-top: 20px;
@@ -65,51 +67,48 @@ body{
     font-weight: bold;
     background-color:darkseagreen;
     cursor: url("/src/visual resources/Rick.cur"),pointer;
-    font-size: 15px;
+    font-size: 20px;
     width: 120px;
+    font-family: 'Acme';
 }
 #Watch_btn{
     font-weight: bold;
     background-color:lightblue;
     cursor: url("/src/visual resources/Mr.Meseeks.cur"),pointer;
-    font-size: 15px;
+    font-size: 20px;
     width: 120px;
+    font-family: 'Acme';
 }
 #About_btn{
     font-weight: bold;
-    background-color:peachpuff;
+    background-color:rgb(244, 207, 113);
     cursor: url("/src/visual resources/Morty.cur"),pointer;
-    font-size: 15px;
+    font-size: 20px;
     width: 120px;
+    font-family: 'Acme';
 }
 #Home_btn:hover{
     font-family: 'get_schwifty' , 'Arial, Helvetica, sans-serif';
     background-color:lightgreen;
     color: rgb(2, 61, 2);
 }
-#WatchList_btn:hover{
-    font-family: 'get_schwifty' , 'Arial, Helvetica, sans-serif';
-    background-color:lightskyblue;
-    color: rgb(179, 82, 2);
-
-}
 #Watch_btn:hover{
     font-family: 'get_schwifty' , 'Arial, Helvetica, sans-serif';
     background-color:lightskyblue;
-    color: rgb(179, 82, 2);
+    color: rgb(255, 117, 62);
 }
 #About_btn:hover{
     font-family: 'get_schwifty' , 'Arial, Helvetica, sans-serif';
-    background-color:rgb(255, 203, 59);
-    color:#221d21;
+    background-color:rgb(255, 148, 17);
+    color:#540700;
 
 }
 
 .Clock{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Acme';
     color: greenyellow;
     font-weight: light;
-    font-size: 17px;
+    font-size: 20px;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -117,5 +116,5 @@ body{
 }
 
 .Clock:hover{
-    color: orange;
+    color: white;
 }
