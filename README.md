@@ -26,7 +26,7 @@ This application includes the following features:
 ## Acknowledgments
 We would like to thank the creators of the [Rick and Morty API](https://rickandmortyapi.com/) for providing the data used in this application.
 
-For detailed documentation and further information, please refer to the project's [GitHub repository]([https://github.com/ItayVazana1/RickAndMorty_React]
+For detailed documentation and further information, please refer to the project's [GitHub repository](https://github.com/ItayVazana1/RickAndMorty_React)
 
 ---
 
