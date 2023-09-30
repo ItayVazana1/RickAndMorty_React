@@ -8,27 +8,41 @@ import Clock from './components/Clock.js';
 
 
 
-
-
 function App() {
-
   return (
     <div className="app-container">
       <header>
-        <Clock/>{}
-        <Mtitle/>{}
+        {/* Include a Clock component */}
+        <Clock />
+        {/* Include a Main Title component */}
+        <Mtitle />
+        {/* Add routing using React Router */}
         <Router>
-        <nav>
-          <ul>  
-              <Link to="/"><button id="Home_btn" type="button" className="btn btn-light m-4 mb-3">Characters</button></Link>
-              <Link to="/WatchList"><button id="Watch_btn" type="button" className="btn btn-light m-4 mb-3">Watch List</button></Link>
-              <Link to="/About"><button id="About_btn" type="button" className="btn btn-light m-4 mb-3">About</button></Link> 
-          </ul>
-        </nav>
-        <Routes>
-          <Route path="/" element={<HomePage/>} />
-          <Route path="/WatchList" element={<WatchListPage />} />
-          <Route path="/About" element={<AboutPage />} />
+          <nav>
+            <ul>
+              {/* Use Links for navigation */}
+              <Link to="/">
+                <button id="Home_btn" type="button" className="btn btn-light m-4 mb-3">
+                  Characters
+                </button>
+              </Link>
+              <Link to="/WatchList">
+                <button id="Watch_btn" type="button" className="btn btn-light m-4 mb-3">
+                  Watch List
+                </button>
+              </Link>
+              <Link to="/About">
+                <button id="About_btn" type="button" className="btn btn-light m-4 mb-3">
+                  About
+                </button>
+              </Link>
+            </ul>
+          </nav>
+          {/* Define routes using Routes and Route components */}
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/WatchList" element={<WatchListPage />} />
+            <Route path="/About" element={<AboutPage />} />
           </Routes>
         </Router>
       </header>

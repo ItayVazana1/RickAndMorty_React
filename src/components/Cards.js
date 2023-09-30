@@ -1,105 +1,126 @@
 import React from 'react';
-import '../Style/DarkMode.css';
 
 
-function Badge_color_status(status){
-    let status_display;
-    switch (status){
+// Function to determine badge color based on character status
+function Badge_color_status(status) {
+    switch (status) {
         case "Alive":
-            status_display = "badge bg-success fw-normal fs-5";
-            break;
+            return {
+                backgroundColor: 'LightGreen',
+                color: 'black'
+            };
         case "Dead":
-            status_display = "badge bg-danger fw-normal fs-5";
-            break;
+            return {
+                backgroundColor: 'IndianRed',
+                color: 'white'
+            };
         case "unknown":
-            status_display = "badge bg-secondary fw-normal fs-5";
-            break;
+            return {
+                backgroundColor: 'DarkSlateGray',
+                color: 'white'
+            };
     }
-    return status_display;
 }
 
-function Length_of_String(name){
+// Function to determine the suitable size of the character's name
+function Length_of_String(name) {
     let name_suitble_size;
-    if (name.length < 20){
+    if (name.length < 20) {
         name_suitble_size = "fs-5 fw-bold m-1";
-    }
-    else{
+    } else {
         name_suitble_size = "fs-6 fw-bold m-1";
     }
     return name_suitble_size;
 }
 
-function gender_color(gender){
-    let gender_display;
-    switch (gender){
+// Function to determine badge color based on character gender
+function gender_color(gender) {
+    switch (gender) {
         case "Male":
-            gender_display = {background: 'SteelBlue' , color: 'white'};
-            break;
+            return {
+                background: 'RoyalBlue',
+                color: 'white'
+            };
         case "Female":
-            gender_display = {background: 'HotPink' , color: ' white'};
-            break;
+            return {
+                background: 'Pink',
+                color: 'black'
+            };
         default:
-            gender_display = {background: 'Gray' , color: 'white'};
-            break;
+            return {
+                background: 'SandyBrown',
+                color: 'black'
+            };
     }
-    return gender_display;
 }
 
-function species_color(species){
-    let species_display;
-    switch (species){
+// Function to determine badge color based on character species
+function species_color(species) {
+    switch (species) {
         case "Human":
-            species_display = {background: 'MistyRose' , color: 'black'};
-            break;
+            return {
+                background: 'PeachPuff',
+                color: 'black'
+            };
         case "Animal":
-            species_display = {background: 'OliveDrab' , color: 'white'};
-            break;
+            return {
+                background: 'YellowGreen',
+                color: 'black'
+            };
         case "Alien":
-            species_display = {background: 'SpringGreen' , color: 'black'};
-            break;
+            return {
+                background: 'MediumSlateBlue',
+                color: 'white'
+            };
         case "Humanoid":
-            species_display = {background: 'RebeccaPurple' , color: 'white'};
-            break;
+            return {
+                background: 'SeaGreen',
+                color: 'white'
+            };
         case "Robot":
-            species_display = {background: 'RoyalBlue' , color: 'white'};
-            break;
+            return {
+                background: 'SlateGray',
+                color: 'white'
+            };
         case "Mythological Creature":
-            species_display = {background: 'DarkGoldenRod' , color: 'white'};
-            break;
+            return {
+                background: 'PaleVioletRed',
+                color: 'white'
+            };
         default:
-            species_display = {background: 'DimGrey' , color: 'white'};
-            break;
+            return {
+                background: 'Orange',
+                color: 'black'
+            };
     }
-    return species_display;
 }
 
-
-
-function Cards ({results}){
+// Component to display character cards
+function Cards({ results }) {
     let display;
-    if(results){
-        display = results.map(x=>{
-            let {id , name , status ,  species , gender , origin , location , image ,episode , url , created } = x;
+    if (results) {
+        display = results.map(x => {
+            let { id, name, status, species, gender, location, image } = x;
             return (
-            <div key={id} className='col-3 text-light position-realtive' id='Character_Card'>
-                <div className=''>
-                    <img src={image} alt={id} className="img-fluid" id="CardImage"/>
-                    <div id="Cardblur"></div>
-                    <div className='content'>
-                        <div className={Length_of_String(name)}>{name}<span></span> <span className={Badge_color_status(status)} id='status_badge'>{status}</span></div>
-                        <div className="mb-4">
-                            <div><span className="badge fw-normal fs-6 m-3" style={gender_color(gender)}>{gender}</span><span className={"badge fw-normal fs-6"} style={species_color(species)}>{species}</span></div>
-                            <div className="fs-6 fw-light" >last seen in-<br></br><span className='fs-6 text-warning fw-normal'>{location.name}</span></div>
+                <div key={id} className='col-3 text-light position-realtive' id='Character_Card'>
+                    <div className=''>
+                        <img src={image} alt={id} className="img-fluid" id="CardImage" />
+                        <div id="Cardblur"></div>
+                        <div className='content'>
+                            <div className={Length_of_String(name)}>{name}<span></span> <span className='badge fw-normal fs-5' style={Badge_color_status(status)} id='status_badge'>{status}</span></div>
+                            <div className="mb-4">
+                                <div><span className="badge fw-normal fs-6 m-3" style={gender_color(gender)}>{gender}</span><span className={"badge fw-normal fs-6"} style={species_color(species)}>{species}</span></div>
+                                <div className="fs-6 fw-light">last seen in-<br></br><span className='fs-6 text-warning fw-normal'>{location.name}</span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             );
         });
-    }else{
+    } else {
         display = "404 - Not Found :("
     }
-    return <> {display} </>;
+    return <>{display}</>;
 }
 
 
