@@ -6,8 +6,8 @@ This is a React web application inspired by the popular TV show "Rick and Morty.
 ## Installation
 To run this application locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/ItayVazana1/rick-and-morty-app.git`
-2. Navigate to the project directory: `cd rick-and-morty-app`
+1. Clone the repository: `git clone https://github.com/ItayVazana1/RickAndMorty_React.git`
+2. Navigate to the project directory: `cd RickAndMorty_React`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
 
