@@ -27,6 +27,7 @@ body{
 }
 
 .mainTitle{
+    position: relative;
     font-family: 'get_schwifty' , 'Arial, Helvetica, sans-serif';
     color: palegreen;
     font-size: 150px;
@@ -105,6 +106,7 @@ body{
 }
 
 .Clock{
+    position: relative;
     font-family:'Acme';
     color: greenyellow;
     font-weight: light;
