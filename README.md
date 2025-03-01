@@ -1,33 +1,70 @@
-# Rick and Morty React Web App
+# 🪐 Rick and Morty React Web App
 
-## Overview
-This is a React web application inspired by the popular TV show "Rick and Morty." It allows users to browse and view information about characters and episodes from the show. Users can also add episods to their watch list for easy reference.
+## 📖 Overview
+This project is a **React web application** inspired by the popular TV show **"Rick and Morty."**  
+It was developed as part of a **technical assessment** for a UX/UI Developer role in a **military technology organization**.
 
-## Installation
-To run this application locally, follow these steps:
-
-1. Clone the repository: `git clone https://github.com/ItayVazana1/RickAndMorty_React.git`
-2. Navigate to the project directory: `cd RickAndMorty_React`
-3. Install dependencies: `npm install`
-4. Start the development server: `npm start`
-
-## Usage
-Once the development server is running, you can access the application in your web browser at `http://localhost:3000`.
-
-## Features
-This application includes the following features:
-
-- Browse and search for characters by name, status, and species.
-- View detailed information about individual characters.
-- Explore episodes and their details.
-- Add episodes to your watch list.
-- Responsive design for mobile and desktop devices.
-
-## Acknowledgments
-We would like to thank the creators of the [Rick and Morty API](https://rickandmortyapi.com/) for providing the data used in this application.
-
-For detailed documentation and further information, please refer to the project's [GitHub repository](https://github.com/ItayVazana1/RickAndMorty_React)
+The application allows users to:
+- Browse and search for **characters** from the show.
+- Explore **episode details**.
+- Manage a personal **watch list** of favorite episodes.
 
 ---
 
-&copy; 2023 Itay Vazana
+## 🚀 Installation & Setup
+To run the application locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/ItayVazana1/RickAndMorty_React.git
+    ```
+2. Navigate into the project directory:
+    ```bash
+    cd RickAndMorty_React
+    ```
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+4. Start the development server:
+    ```bash
+    npm start
+    ```
+5. Open your browser and visit:
+    ```
+    http://localhost:3000
+    ```
+
+---
+
+## 🎨 Features
+The app includes the following features:
+
+- 🔎 **Character Search:** Search characters by name, status (Alive, Dead, Unknown), and species.
+- 📄 **Character Details:** View full character profiles including origin, episodes, and status.
+- 🎥 **Episode Browser:** Browse and view all episodes with descriptions and character lists.
+- ⭐ **Watch List Management:** Add favorite episodes to your personal watch list for quick access.
+- 📱 **Responsive Design:** Optimized for both desktop and mobile devices.
+
+---
+
+## 🛠️ Technologies Used
+- **React.js** - Frontend framework
+- **React Router** - Client-side routing
+- **CSS Modules** - Component-specific styling
+- **Rick and Morty API** - External data source
+
+---
+
+## 🎯 Purpose & Context
+This project was created as part of a **recruitment process** for a **UX/UI Developer** position in a **classified military technology organization**.
+
+The goal was to demonstrate:
+- Frontend development capabilities using **React**.
+- Ability to implement **user-friendly interfaces**.
+- Strong understanding of **state management**, **API integration**, and **responsive design**.
+
+---
+
+## 🙏 Acknowledgments
+Special thanks to the creators of the [Rick and Morty API](https://rickandmortyapi.com/) for providing the data that powers this application.
